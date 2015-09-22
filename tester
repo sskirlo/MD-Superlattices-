@@ -1,0 +1,22 @@
+
+
+gcc -o strainfields strainfields.c -lm
+
+#./strainfields reffiles/cunb_view0.dump reffiles/cunb_view0.dump 1 stressdistdir 5.0 2
+#./strainfields reffiles/cunb_view0.dump reffiles/cunb_view0.dump 1 stressdistxz 5.0 2
+#./strainfields reffiles/cunb_view0.dump reffiles/cunb_view0.dump 1 writeout
+#./strainfields reffiles/cunb_references.dump reffiles/cunb_references.dump 1 writeout
+#./strainfields reffiles/cunb_view0.dump reffiles/cunb_view0.dump 1 minmax
+
+#./strainfields reffiles/cunb_references.dump reffiles/cunb_references.dump 1 reffile 39.5 42.4 1 
+#./strainfields reffiles/cunb_references.dump reffiles/cunb_references.dump 1 reffile 39.5 42.4 3 
+#./strainfields reffiles/cunb_KS1pmineds.dump reffiles/cunb_KS1pmineds.dump 1 disregistry 1 
+#./strainfields reffiles/cunb_KS1pminedm1.dump reffiles/cunb_KS1pminedm1.dump 1 avgz  
+
+
+#we want to test out method which calculates disregistry for stepped interfaces
+#./strainfields reffiles/deformed13001.dump reffiles/deformed13001.dump 1 reffile 40.5 45 4 1 48.0 96.81 2.2 
+#./strainfields reffiles/deformed13002.dump reffiles/deformed13002.dump 1 disregistry 4 
+
+./strainfields reffiles/deformed23001.dump reffiles/deformed23001.dump 1 reffile 41.0 45.0 4 2 23.0 48.0 72.0 96.0 2.2 
+./strainfields reffiles/deformed23002.dump reffiles/deformed23002.dump 1 disregistry 4 1

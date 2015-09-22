@@ -1,0 +1,33 @@
+#purpose of code is to update all relevant code in all files
+
+gcc -o strainfields strainfields.c -lm
+
+fname="strainfields"
+slash="/"
+
+mainpath="/home/sskirlo/data/cunb"
+
+path1="/KS1"
+path2="/KS2"
+path3="/vacancy"
+path4="/Demk"
+path5="/KS1shear"
+path6="/SPD"
+path7="/KS1step"
+path8="/KS1step/stress-results"
+path9="/KS1step/disregistry-results"
+path10="/KS2shear"
+path11="/KSminshear"
+
+#do copying operations
+cp ${fname} ${mainpath}${path1}${slash}${fname}
+cp ${fname} ${mainpath}${path2}${slash}${fname}
+cp ${fname} ${mainpath}${path3}${slash}${fname}
+cp ${fname} ${mainpath}${path4}${slash}${fname}
+cp ${fname} ${mainpath}${path5}${slash}${fname}
+cp ${fname} ${mainpath}${path6}${slash}${fname}
+cp ${fname} ${mainpath}${path7}${slash}${fname}
+cp ${fname} ${mainpath}${path8}${slash}${fname}
+cp ${fname} ${mainpath}${path9}${slash}${fname}
+cp ${fname} ${mainpath}${path10}${slash}${fname}
+cp ${fname} ${mainpath}${path11}${slash}${fname}
